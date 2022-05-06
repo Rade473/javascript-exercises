@@ -1,9 +1,5 @@
 function reverseString(string) {
-    string;
-    array = string.split('');
-    newarray = array.reverse();
-    newString = newarray.join('');
-    return newString;
+ return string.split('').reverse().join('');
 }
 
 // Do not edit below this line
