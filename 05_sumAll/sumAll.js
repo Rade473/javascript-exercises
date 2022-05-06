@@ -1,18 +1,17 @@
-const sumAll = function(a,b) {
-
-if (a<0||b<0||isNaN(a)||isNaN(b)){
-    return x = 'ERROR';
-} 
-else if (a>b){
-    [a,b]=[b,a]
-};
-
-
-let range = Array.from({length: b}, (_x,i)=>i+a);
-let sum = ((a+b)*range.length)/2;
-return sum
-}
-
+const sumAll = function(min, max) {
+    if (!Number.isInteger(min) || !Number.isInteger(max)) return "ERROR";
+    if (min < 0 || max < 0) return "ERROR";
+    if (min > max) {
+      const temp = min;
+      min = max;
+      max = temp;
+    }
+    let sum = 0;
+    for (let i = min; i < max + 1; i++) {
+      sum += i;
+    }
+    return sum;
+  };
 
 
 
